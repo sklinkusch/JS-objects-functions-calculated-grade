@@ -34,3 +34,19 @@ function loopThrough(array) {
     student.grade = calculateGrade(student.points);
   });
 }
+
+function calculateGrade(points) {
+  if (points >= 90) {
+    return "A";
+  } else if (points >= 70) {
+    return "B";
+  } else if (points >= 50) {
+    return "C";
+  } else if (points >= 30) {
+    return "D";
+  } else if (points >= 10) {
+    return "E";
+  } else {
+    return "F";
+  }
+}
