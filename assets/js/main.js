@@ -50,3 +50,6 @@ function calculateGrade(points) {
     return "F";
   }
 }
+
+loopThrough(students);
+students.forEach(student => console.log(student));
