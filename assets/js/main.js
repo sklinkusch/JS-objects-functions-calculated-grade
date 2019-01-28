@@ -28,3 +28,9 @@ const students = [
     points: 9
   }
 ];
+
+function loopThrough(array) {
+  array.forEach(student => {
+    student.grade = calculateGrade(student.points);
+  });
+}
