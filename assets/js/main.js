@@ -51,16 +51,22 @@ function calculateGrade(points) {
   }
 }
 
-loopThrough(students);
-var table;
-table =
-  "<table><thead><tr><th>Name</th><th>Points</th><th>Grade</th></tr></thead><tbody>";
-students.forEach(student => {
+function getTable(array) {
+  let table;
   table =
-    table +
-    `<tr><td>${student.name}</td><td>${student.points}</td><td>${
-      student.grade
-    }</td></tr>`;
-});
-table = table + "</tbody></table>";
-document.getElementById("table").innerHTML = table;
+    "<table><thead><tr><th>Name</th><th>Points</th><th>Grade</th></tr></thead><tbody>";
+  students.forEach(student => {
+    table =
+      table +
+      `<tr><td>${student.name}</td><td>${student.points}</td><td>${
+        student.grade
+      }</td></tr>`;
+  });
+  table = table + "</tbody></table>";
+  return table;
+}
+function printTable(array) {
+  document.getElementById("table").innerHTML = getTable(array);
+}
+loopThrough(students);
+printTable(students);
